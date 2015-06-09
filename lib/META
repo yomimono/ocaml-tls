@@ -1,5 +1,5 @@
 # OASIS_START
-# DO NOT EDIT (digest: 5a050b6a732156a8ce9cc75578ec7bfb)
+# DO NOT EDIT (digest: b27658c390bf25a246ccf5243d07ed7d)
 version = "0.5.0"
 description = "TLS support for OCaml"
 requires = "cstruct sexplib nocrypto x509"
@@ -8,6 +8,17 @@ archive(byte, plugin) = "tls.cma"
 archive(native) = "tls.cmxa"
 archive(native, plugin) = "tls.cmxs"
 exists_if = "tls.cma"
+package "tracing" (
+ version = "0.5.0"
+ description = "TLS support for OCaml"
+ requires = "sexplib sexplib.syntax tls cstruct.unix"
+ archive(byte) = "tracing.cma"
+ archive(byte, plugin) = "tracing.cma"
+ archive(native) = "tracing.cmxa"
+ archive(native, plugin) = "tracing.cmxs"
+ exists_if = "tracing.cma"
+)
+
 package "mirage" (
  version = "0.5.0"
  description = "TLS support for OCaml"
